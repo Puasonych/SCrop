@@ -8,73 +8,78 @@
 
 import UIKit
 
-open class SCropViewController: UIViewController {
+public class SCropViewController: UIViewController {
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var shadowView: UIView!
     @IBOutlet private weak var cropView: UIView!
     @IBOutlet private weak var tabBarView: UIView!
-    @IBOutlet private weak var cancleButton: UIButton!
+    @IBOutlet private weak var cancelButton: UIButton!
     @IBOutlet private weak var usePhotoButton: UIButton!
 
     private var image: UIImage
     
+    public enum CropViewType {
+        case circle
+        case rectangle
+    }
+    
     public weak var delegate: SCropViewControllerDelegate?
     
-    @IBInspectable var cropViewBorderColor: UIColor = UIColor.white {
+    public var cropViewBorderColor: UIColor = UIColor.white {
         didSet {
             self.cropView.layer.borderColor = self.cropViewBorderColor.cgColor
         }
     }
     
-    @IBInspectable var cropViewBorderWidth: CGFloat = 1 {
+    public var cropViewBorderWidth: CGFloat = 1 {
         didSet {
             self.cropView.layer.borderWidth = self.cropViewBorderWidth
         }
     }
     
-    @IBInspectable var cropViewCornerRadius: CGFloat = 0 {
+    public var cropViewCornerRadius: CGFloat = 0 {
         didSet {
             self.cropView.layer.cornerRadius = self.cropViewCornerRadius
+            self.needUpdateCropViewCornerRadius()
         }
     }
     
-    @IBInspectable var shadowViewBackgoundColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5) {
+    public var cropViewType: CropViewType = .circle {
+        didSet {
+            self.needUpdateCropViewCornerRadius()
+        }
+    }
+    
+    public var shadowViewBackgoundColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5) {
         didSet {
             self.shadowView.backgroundColor = self.shadowViewBackgoundColor
         }
     }
     
-    @IBInspectable var tabBarBackgoundColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75) {
+    public var tabBarBackgoundColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75) {
         didSet {
             self.tabBarView.backgroundColor = self.tabBarBackgoundColor
         }
     }
     
-    @IBInspectable var cancleButtonColor: UIColor = UIColor.white {
-        didSet {
-            self.cancleButton.setTitleColor(self.cancleButtonColor, for: UIControl.State.normal)
-        }
-    }
-    
-    @IBInspectable var usePhotoButtonColor: UIColor = UIColor.white {
-        didSet {
-            self.usePhotoButton.setTitleColor(self.usePhotoButtonColor, for: UIControl.State.normal)
-        }
-    }
-    
     public init(image: UIImage) {
         self.image = image
-        super.init(nibName: nil, bundle: nil)
+        let name = String(describing: type(of: self))
+        super.init(nibName: name, bundle: Bundle(for: SCropViewController.self))
     }
     
-    open override func viewDidLoad() {
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+
         self.scrollView.delegate = self
         self.imageView.image = self.image
+        
         self.cropView.layer.masksToBounds = true
+        self.cropView.backgroundColor = UIColor.clear
     }
     
-    open override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.addTransparentHole()
     }
@@ -82,8 +87,13 @@ open class SCropViewController: UIViewController {
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    public func setTintColor(_ color: UIColor?, for state: UIControl.State) {
+        self.cancelButton.setTitleColor(color, for: state)
+        self.usePhotoButton.setTitleColor(color, for: state)
+    }
 
-    @IBAction func onTapCancleButton(_ sender: UIButton) {
+    @IBAction func onTapCancelButton(_ sender: UIButton) {
         self.closeViewController()
     }
     
@@ -104,6 +114,15 @@ open class SCropViewController: UIViewController {
         delegate?.croppedImage(result: .success(croppedImage))
         
         self.closeViewController()
+    }
+    
+    private func needUpdateCropViewCornerRadius() {
+        switch self.cropViewType {
+        case .circle:
+            self.cropView.layer.cornerRadius = self.cropView.frame.width / 2
+        case .rectangle:
+            self.cropView.layer.cornerRadius = self.cropViewCornerRadius
+        }
     }
     
     private func addTransparentHole() {

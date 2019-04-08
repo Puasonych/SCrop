@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		6F0F6E812255E17100841311 /* SCrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0F6E7F2255E17100841311 /* SCrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F0F6E8B2256223F00841311 /* SCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0F6E8A2256223F00841311 /* SCropViewController.swift */; };
-		6F0F6E8D2257344E00841311 /* SCropViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F0F6E8F2257344E00841311 /* SCropViewController.storyboard */; };
 		6FF16549225AFE17001C8F29 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF16548225AFE17001C8F29 /* UIImage+Extensions.swift */; };
 		6FF1654B225AFF06001C8F29 /* SCropViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF1654A225AFF06001C8F29 /* SCropViewControllerDelegate.swift */; };
 		6FF1654D225AFFC6001C8F29 /* SCropViewController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF1654C225AFFC6001C8F29 /* SCropViewController+Errors.swift */; };
 		6FF1654F225B042E001C8F29 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF1654E225B042E001C8F29 /* UIImageView+Extensions.swift */; };
+		6FF16557225B0924001C8F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF16556225B0924001C8F29 /* AppDelegate.swift */; };
+		6FF16559225B0924001C8F29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF16558225B0924001C8F29 /* ViewController.swift */; };
+		6FF1655C225B0924001C8F29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1655A225B0924001C8F29 /* Main.storyboard */; };
+		6FF1655E225B0925001C8F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1655D225B0925001C8F29 /* Assets.xcassets */; };
+		6FF16561225B0925001C8F29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1655F225B0925001C8F29 /* LaunchScreen.storyboard */; };
+		6FF16567225B17C7001C8F29 /* SCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF16566225B17C7001C8F29 /* SCropViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,15 +26,29 @@
 		6F0F6E7F2255E17100841311 /* SCrop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCrop.h; sourceTree = "<group>"; };
 		6F0F6E802255E17100841311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F0F6E8A2256223F00841311 /* SCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCropViewController.swift; sourceTree = "<group>"; };
-		6F0F6E8E2257344E00841311 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/SCropViewController.storyboard; sourceTree = "<group>"; };
 		6FF16548225AFE17001C8F29 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		6FF1654A225AFF06001C8F29 /* SCropViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCropViewControllerDelegate.swift; sourceTree = "<group>"; };
 		6FF1654C225AFFC6001C8F29 /* SCropViewController+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCropViewController+Errors.swift"; sourceTree = "<group>"; };
 		6FF1654E225B042E001C8F29 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		6FF16554225B0924001C8F29 /* SCropExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCropExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FF16556225B0924001C8F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6FF16558225B0924001C8F29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6FF1655B225B0924001C8F29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6FF1655D225B0925001C8F29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6FF16560225B0925001C8F29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6FF16562225B0925001C8F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FF16566225B17C7001C8F29 /* SCropViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCropViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6F0F6E792255E17100841311 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FF16551225B0924001C8F29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				6F0F6E7E2255E17100841311 /* SCrop */,
+				6FF16555225B0924001C8F29 /* SCropExample */,
 				6F0F6E7D2255E17100841311 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				6F0F6E7C2255E17100841311 /* SCrop.framework */,
+				6FF16554225B0924001C8F29 /* SCropExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,11 +84,24 @@
 				6FF1654C225AFFC6001C8F29 /* SCropViewController+Errors.swift */,
 				6FF1654A225AFF06001C8F29 /* SCropViewControllerDelegate.swift */,
 				6F0F6E8A2256223F00841311 /* SCropViewController.swift */,
-				6F0F6E8F2257344E00841311 /* SCropViewController.storyboard */,
+				6FF16566225B17C7001C8F29 /* SCropViewController.xib */,
 				6F0F6E7F2255E17100841311 /* SCrop.h */,
 				6F0F6E802255E17100841311 /* Info.plist */,
 			);
 			path = SCrop;
+			sourceTree = "<group>";
+		};
+		6FF16555225B0924001C8F29 /* SCropExample */ = {
+			isa = PBXGroup;
+			children = (
+				6FF16556225B0924001C8F29 /* AppDelegate.swift */,
+				6FF16558225B0924001C8F29 /* ViewController.swift */,
+				6FF1655A225B0924001C8F29 /* Main.storyboard */,
+				6FF1655D225B0925001C8F29 /* Assets.xcassets */,
+				6FF1655F225B0925001C8F29 /* LaunchScreen.storyboard */,
+				6FF16562225B0925001C8F29 /* Info.plist */,
+			);
+			path = SCropExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,18 +136,39 @@
 			productReference = 6F0F6E7C2255E17100841311 /* SCrop.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		6FF16553225B0924001C8F29 /* SCropExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FF16563225B0925001C8F29 /* Build configuration list for PBXNativeTarget "SCropExample" */;
+			buildPhases = (
+				6FF16550225B0924001C8F29 /* Sources */,
+				6FF16551225B0924001C8F29 /* Frameworks */,
+				6FF16552225B0924001C8F29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCropExample;
+			productName = SCropExample;
+			productReference = 6FF16554225B0924001C8F29 /* SCropExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		6F0F6E732255E17100841311 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Three man army";
 				TargetAttributes = {
 					6F0F6E7B2255E17100841311 = {
 						CreatedOnToolsVersion = 10.2;
 						LastSwiftMigration = 1020;
+					};
+					6FF16553225B0924001C8F29 = {
+						CreatedOnToolsVersion = 10.2;
 					};
 				};
 			};
@@ -123,6 +178,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 6F0F6E722255E17100841311;
 			productRefGroup = 6F0F6E7D2255E17100841311 /* Products */;
@@ -130,6 +186,7 @@
 			projectRoot = "";
 			targets = (
 				6F0F6E7B2255E17100841311 /* SCrop */,
+				6FF16553225B0924001C8F29 /* SCropExample */,
 			);
 		};
 /* End PBXProject section */
@@ -139,7 +196,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F0F6E8D2257344E00841311 /* SCropViewController.storyboard in Resources */,
+				6FF16567225B17C7001C8F29 /* SCropViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FF16552225B0924001C8F29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FF16561225B0925001C8F29 /* LaunchScreen.storyboard in Resources */,
+				6FF1655E225B0925001C8F29 /* Assets.xcassets in Resources */,
+				6FF1655C225B0924001C8F29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,15 +225,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6FF16550225B0924001C8F29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FF16559225B0924001C8F29 /* ViewController.swift in Sources */,
+				6FF16557225B0924001C8F29 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6F0F6E8F2257344E00841311 /* SCropViewController.storyboard */ = {
+		6FF1655A225B0924001C8F29 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6F0F6E8E2257344E00841311 /* en */,
+				6FF1655B225B0924001C8F29 /* Base */,
 			);
-			name = SCropViewController.storyboard;
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6FF1655F225B0925001C8F29 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FF16560225B0925001C8F29 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -345,6 +429,40 @@
 			};
 			name = Release;
 		};
+		6FF16564225B0925001C8F29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SCropExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.three-man-army.SCropExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6FF16565225B0925001C8F29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SCropExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.three-man-army.SCropExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -362,6 +480,15 @@
 			buildConfigurations = (
 				6F0F6E852255E17100841311 /* Debug */,
 				6F0F6E862255E17100841311 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FF16563225B0925001C8F29 /* Build configuration list for PBXNativeTarget "SCropExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FF16564225B0925001C8F29 /* Debug */,
+				6FF16565225B0925001C8F29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
