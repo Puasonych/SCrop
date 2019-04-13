@@ -1,5 +1,5 @@
 //
-//  SCropViewController+Errors.swift
+//  SCropController+Errors.swift
 //  SCrop
 //
 //  Created by Eric Basargin on 08/04/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension SCropViewController {
+public extension SCropController {
     enum Errors: Error, LocalizedError {
         case correctionError
         case unableCropImage

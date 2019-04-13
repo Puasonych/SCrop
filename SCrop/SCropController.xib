@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SCropViewController" customModule="SCrop" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SCropController" customModule="SCrop" customModuleProvider="target">
             <connections>
                 <outlet property="cancelButton" destination="MrY-bn-gdr" id="pC4-6x-zyi"/>
                 <outlet property="cropView" destination="fuQ-GK-5Ew" id="gsH-H9-47z"/>
-                <outlet property="imageView" destination="ySb-pd-tZh" id="Zwi-Mb-aML"/>
+                <outlet property="imageView" destination="HMy-SA-Iwp" id="pRG-Ae-EPg"/>
                 <outlet property="scrollView" destination="dd2-3L-w9q" id="Dmj-2X-ohF"/>
                 <outlet property="shadowView" destination="OLA-Dg-8Mr" id="tNO-F3-eac"/>
                 <outlet property="tabBarView" destination="1FO-vW-uP6" id="KWD-QX-bqW"/>
@@ -27,21 +27,24 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="dd2-3L-w9q">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="dd2-3L-w9q">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ySb-pd-tZh">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HMy-SA-Iwp">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         </imageView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="ySb-pd-tZh" secondAttribute="bottom" id="DC7-Xx-vFp"/>
-                        <constraint firstAttribute="trailing" secondItem="ySb-pd-tZh" secondAttribute="trailing" id="GcY-V7-RXI"/>
-                        <constraint firstItem="ySb-pd-tZh" firstAttribute="leading" secondItem="dd2-3L-w9q" secondAttribute="leading" id="cFz-Ta-DRX"/>
-                        <constraint firstItem="ySb-pd-tZh" firstAttribute="top" secondItem="dd2-3L-w9q" secondAttribute="top" id="lI3-R3-NuQ"/>
-                        <constraint firstItem="ySb-pd-tZh" firstAttribute="centerY" secondItem="dd2-3L-w9q" secondAttribute="centerY" id="mh6-Eh-5gR"/>
-                        <constraint firstItem="ySb-pd-tZh" firstAttribute="centerX" secondItem="dd2-3L-w9q" secondAttribute="centerX" id="weN-QF-Otj"/>
+                        <constraint firstItem="HMy-SA-Iwp" firstAttribute="centerX" secondItem="dd2-3L-w9q" secondAttribute="centerX" id="9gj-Lc-zh8"/>
+                        <constraint firstAttribute="bottom" secondItem="HMy-SA-Iwp" secondAttribute="bottom" id="BGW-58-DFy"/>
+                        <constraint firstItem="HMy-SA-Iwp" firstAttribute="centerY" secondItem="dd2-3L-w9q" secondAttribute="centerY" id="NHQ-dC-M0o"/>
+                        <constraint firstItem="HMy-SA-Iwp" firstAttribute="leading" secondItem="dd2-3L-w9q" secondAttribute="leading" id="RXS-1O-yZb"/>
+                        <constraint firstAttribute="trailing" secondItem="HMy-SA-Iwp" secondAttribute="trailing" id="t8L-dy-QLW"/>
+                        <constraint firstItem="HMy-SA-Iwp" firstAttribute="top" secondItem="dd2-3L-w9q" secondAttribute="top" id="vPA-at-HK7"/>
                     </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Bm6-nu-ITk"/>
+                    </connections>
                 </scrollView>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLA-Dg-8Mr" userLabel="Shadow View">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>

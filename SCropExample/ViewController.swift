@@ -40,7 +40,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
         picker.dismiss(animated: true) {
-            let sCropViewController = SCropViewController(image: image)
+            let sCropViewController = SCropController(image: image)
             
             sCropViewController.delegate = self
             
@@ -53,13 +53,19 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     }
 }
 
-extension ViewController: SCropViewControllerDelegate {
-    func croppedImage(result: Result<UIImage, SCropViewController.Errors>) {
-        switch result {
+extension ViewController: SCropControllerDelegate {
+    func sCropController(_ crop: SCropController, didFinishWithInfo info: Result<UIImage, SCropController.Errors>) {
+        switch info {
         case let .success(image):
             self.imageView.image = image
         case let .failure(error):
             print(error.errorDescription!)
         }
+        
+        crop.dismiss(animated: true, completion: nil)
+    }
+    
+    func sCropControllerDidCancel(_ crop: SCropController) {
+        crop.dismiss(animated: true, completion: nil)
     }
 }
